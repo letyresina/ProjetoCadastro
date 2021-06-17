@@ -1,0 +1,58 @@
+﻿@model ProjetoCadastro.Models.Produto
+
+
+@{
+    ViewBag.Title = "ResultadoView";
+}
+
+<h2>Dados do Produto</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+<fieldset>
+    <legend>Produto</legend>
+    <div class="editor-label">
+        @Html.DisplayNameFor(model => model.CodProd)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.CodProd)
+    </div>
+    <div class="editor-label">
+        @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+    <div class="editor-label">
+        @Html.DisplayNameFor(model => model.DescrProd)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.DescrProd)
+    </div>
+    <div class="editor-label">
+        @Html.DisplayNameFor(model => model.PesoProd)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.PesoProd)
+    </div>
+    <div class="editor-label">
+        @Html.DisplayNameFor(model => model.CategProd)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.CategProd)
+    </div>
+    <div class="editor-label">
+        @Html.DisplayNameFor(model => model.VlrUnit)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.VlrUnit)
+    </div>
+
+    <p>@Html.ActionLink("Voltar", "ProdutoView")</p>
+</fieldset>
+
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval");
+        }
+}
+

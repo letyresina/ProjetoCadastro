@@ -1,0 +1,62 @@
+﻿@model ProjetoCadastro.Models.Produto
+@{
+    ViewBag.Title = "ProdutoView";
+}
+
+<h2>Cadastro de Produtos</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+<fieldset>
+    <legend>Dados do Produto</legend>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.CodProd)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.CodProd)
+        @Html.ValidationMessageFor(model => model.CodProd)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Nome)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Nome)
+        @Html.ValidationMessageFor(model => model.Nome)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.DescrProd)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.DescrProd)
+        @Html.ValidationMessageFor(model => model.DescrProd)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.PesoProd)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.PesoProd)
+        @Html.ValidationMessageFor(model => model.PesoProd)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.CategProd)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.CategProd)
+        @Html.ValidationMessageFor(model => model.CategProd)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.VlrUnit)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.VlrUnit)
+        @Html.ValidationMessageFor(model => model.VlrUnit)
+    </div>
+    <p><input type="submit" value="Cadastrar"/></p>
+</fieldset>
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval");
+        }
+}
+
+
+
